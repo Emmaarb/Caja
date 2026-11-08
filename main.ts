@@ -98,6 +98,7 @@ input.onGesture(Gesture.Shake, function () {
 input.onButtonPressed(Button.AB, function () {
     if (Num2[0] == "0111") {
         basic.showString("Correcto")
+        Num2[0] = ""
         basic.showLeds(`
             . # . # .
             . # . # .
@@ -105,8 +106,11 @@ input.onButtonPressed(Button.AB, function () {
             # . . . #
             . # # # .
             `)
+        basic.showString("Empezar: Sacude")
     } else {
         basic.showString("Incorrecto")
+        Num2[0] = ""
+        basic.showString("Empezar: Sacude")
     }
 })
 input.onButtonPressed(Button.B, function () {

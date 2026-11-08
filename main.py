@@ -100,6 +100,7 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 def on_button_pressed_ab():
     if Num2[0] == "0111":
         basic.show_string("Correcto")
+        Num2[0] = ""
         basic.show_leds("""
             . # . # .
             . # . # .
@@ -109,6 +110,7 @@ def on_button_pressed_ab():
             """)
     else:
         basic.show_string("Incorrecto")
+        Num2[0] = ""
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
 def on_button_pressed_b():
